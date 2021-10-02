@@ -6,4 +6,4 @@ befor_install:
   - docker build -t pmahawar/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run pmahawar/docker-react npm run test -- --coverage
+  - docker run -e CI=true pmahawar/docker-react npm run test -- --coverage
